@@ -44,3 +44,23 @@ Single-page budget tracker app (React 19 + Vite + Tailwind CSS v4). No backend �
 - `src/App.test.jsx` — integration tests covering full add/edit/delete/filter/persist flows through the real UI
 
 **Conventions:** `beforeEach` calls `localStorage.clear()` and sets a deterministic system time via `vi.setSystemTime`. `afterEach` calls `vi.useRealTimers()`. `window.confirm` is mocked with `vi.spyOn(window, 'confirm')` in delete tests.
+
+## Git & GitHub Workflow
+
+After every meaningful change, commit and push to GitHub:
+
+```bash
+git add <changed files>
+git commit -m "type: short description of what changed and why"
+git push
+```
+
+**Commit message conventions:**
+- `feat:` new feature or behaviour
+- `fix:` bug fix
+- `refactor:` code restructure with no behaviour change
+- `test:` adding or updating tests
+- `chore:` tooling, config, dependency updates
+- `docs:` documentation only
+
+Keep messages concise but descriptive — explain *what* changed and *why*, not *how*. Never use `git add -A` or `git add .` blindly; always stage specific files to avoid committing secrets or build artifacts.
