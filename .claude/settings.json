@@ -1,0 +1,17 @@
+{
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cd /Users/diego.hakamada/workspace/claude-code/first-project && npm test 2>&1 || true",
+            "timeout": 60,
+            "statusMessage": "Executando testes..."
+          }
+        ]
+      }
+    ]
+  }
+}
